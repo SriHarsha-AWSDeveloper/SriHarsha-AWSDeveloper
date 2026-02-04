@@ -1,0 +1,20 @@
+{
+  "name": "SriHarsha-AWSDeveloper",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Personal portfolio website built with modern JavaScript tooling and managed using Yarn.",
+  "repository": "git@github.com:SriHarsha-AWSDeveloper/SriHarsha-AWSDeveloper.git",
+  "author": "sriharsha.godavarthideveloper@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "develop": "vite dev --open --host localhost--port 3000",
+    "build": "vite build --outDir dist --target es5 --assetsDir assets ",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-typescript": "^7.28.6",
+    "@babel/preset-react": "^7.28.5",
+    "vite": "^7.3.1"
+  },
+  "dependencies": {}
+}
