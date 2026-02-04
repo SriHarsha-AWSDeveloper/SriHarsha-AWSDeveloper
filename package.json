@@ -7,14 +7,22 @@
   "author": "sriharsha.godavarthideveloper@gmail.com",
   "license": "MIT",
   "scripts": {
-    "develop": "vite dev --open --host localhost--port 3000",
-    "build": "vite build --outDir dist --target es5 --assetsDir assets ",
+    "develop": "vite dev --open --host localhost --port 3000",
+    "dev": "vite",
+    "build": "vite build --outDir dist --assetsDir assets",
     "preview": "vite preview"
   },
   "devDependencies": {
     "@babel/plugin-transform-typescript": "^7.28.6",
     "@babel/preset-react": "^7.28.5",
+    "@vitejs/plugin-react": "^5.1.3",
+    "postcss": "^8.5.6",
+    "autoprefixer": "^10.4.19",
+    "tailwindcss": "^3.4.13",
     "vite": "^7.3.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  }
 }
