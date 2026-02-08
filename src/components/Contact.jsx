@@ -1,52 +1,73 @@
-import React from 'react'
+﻿import React, { useState } from 'react'
 
 export default function Contact() {
   const CONTACT = {
     email: 'sriharsha.godavarthideveloper@gmail.com',
-    phone: '+1-945-342-3862', // TODO: update with your number
-    location: 'Irving, TX',
+    phone: '+1-945-342-3862',
+    location: 'United States',
+  }
+
+  const [form, setForm] = useState({ name: '', email: '', message: '' })
+
+  const handle = e => {
+    e.preventDefault()
+    window.location.href = `mailto:${CONTACT.email}?subject=Message from ${form.name}&body=${encodeURIComponent(form.message)}%0A%0AFrom: ${form.email}`
   }
 
   return (
-    <div className="space-y-6">
-      <h2 className="text-xl sm:text-2xl font-semibold">Contact</h2>
-      <div className="rounded-2xl border bg-white shadow-sm overflow-hidden">
-        <div className="p-6 sm:p-8 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          <div className="md:col-span-1 space-y-2 md:space-y-3">
-            <h3 className="text-lg sm:text-xl font-semibold">Let’s connect</h3>
-            <p className="text-sm sm:text-base text-gray-600 max-w-md">Reach out via email or phone. I’m open to opportunities in cloud, full‑stack, and platform engineering.</p>
+    <div className="space-y-5">
+      <span className="sec-label">Contact</span>
+      <div className="panel overflow-hidden grid grid-cols-1 md:grid-cols-5">
+        {/* Left — form */}
+        <form onSubmit={handle} className="md:col-span-3 p-6 sm:p-8 space-y-4">
+          <h3 className="text-lg font-semibold" style={{ color: 'var(--text)' }}>Send a message</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input
+              type="text"
+              placeholder="Your name"
+              required
+              value={form.name}
+              onChange={e => setForm({ ...form, name: e.target.value })}
+              className="w-full rounded-lg px-4 py-2.5 text-sm outline-none transition"
+              style={{ background: 'var(--surface)', border: '1px solid var(--border)', color: 'var(--text)' }}
+            />
+            <input
+              type="email"
+              placeholder="Your email"
+              required
+              value={form.email}
+              onChange={e => setForm({ ...form, email: e.target.value })}
+              className="w-full rounded-lg px-4 py-2.5 text-sm outline-none transition"
+              style={{ background: 'var(--surface)', border: '1px solid var(--border)', color: 'var(--text)' }}
+            />
           </div>
-          <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 lg:gap-6 items-stretch">
-            <a href={`mailto:${CONTACT.email}`} className="group p-5 rounded-xl bg-blue-50/60 border border-blue-100 flex items-center gap-3 hover:bg-blue-50 min-h-[80px]">
-              <span className="text-blue-700">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.243l8 6 8-6V18H4z"/></svg>
-              </span>
-              <div className="flex-1 min-w-0">
-                <div className="text-xs text-gray-500">Email</div>
-                <div className="text-sm font-medium text-gray-800 group-hover:text-blue-800 break-words leading-snug">{CONTACT.email}</div>
-              </div>
-            </a>
-            <a href={`tel:${CONTACT.phone}`} className="group p-5 rounded-xl bg-emerald-50/60 border border-emerald-100 flex items-center gap-3 hover:bg-emerald-50 min-h-[80px]">
-              <span className="text-emerald-700">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6"><path d="M6.62 10.79a15.09 15.09 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.56.57 1 1 0 011 1v3.5a1 1 0 01-1 1A17.5 17.5 0 013.5 6a1 1 0 011-1H8a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1.01l-2.7 2.22z"/></svg>
-              </span>
-              <div>
-                <div className="text-xs text-gray-500">Phone</div>
-                <div className="text-sm font-medium text-gray-800 group-hover:text-emerald-800">{CONTACT.phone}</div>
-              </div>
-            </a>
-            <div className="p-5 rounded-xl bg-slate-50/60 border border-slate-200 flex items-center gap-3 sm:col-span-2 min-h-[80px]">
-              <span className="text-slate-700">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 17.93V18a1 1 0 00-2 0v1.93A8.001 8.001 0 014.07 13H6a1 1 0 000-2H4.07A8.001 8.001 0 0111 4.07V6a1 1 0 002 0V4.07A8.001 8.001 0 0119.93 11H18a1 1 0 000 2h1.93A8.001 8.001 0 0113 19.93z"/></svg>
-              </span>
-              <div>
-                <div className="text-xs text-gray-500">Location</div>
-                <div className="text-sm font-medium text-gray-800">{CONTACT.location}</div>
-              </div>
-            </div>
+          <textarea
+            placeholder="Your message"
+            required
+            rows={4}
+            value={form.message}
+            onChange={e => setForm({ ...form, message: e.target.value })}
+            className="w-full rounded-lg px-4 py-2.5 text-sm outline-none transition resize-none"
+            style={{ background: 'var(--surface)', border: '1px solid var(--border)', color: 'var(--text)' }}
+          />
+          <button type="submit" className="btn btn-fill px-6 py-2.5 text-sm">Send message</button>
+        </form>
+
+        {/* Right — info */}
+        <div className="md:col-span-2 p-6 sm:p-8 flex flex-col justify-center gap-6" style={{ background: 'var(--accent-soft)' }}>
+          <div className="space-y-1">
+            <p className="text-xs font-medium uppercase tracking-wider" style={{ color: 'var(--accent)' }}>Email</p>
+            <a href={`mailto:${CONTACT.email}`} className="text-sm font-medium hover:underline" style={{ color: 'var(--text)' }}>{CONTACT.email}</a>
+          </div>
+          <div className="space-y-1">
+            <p className="text-xs font-medium uppercase tracking-wider" style={{ color: 'var(--accent)' }}>Phone</p>
+            <a href={`tel:${CONTACT.phone}`} className="text-sm font-medium hover:underline" style={{ color: 'var(--text)' }}>{CONTACT.phone}</a>
+          </div>
+          <div className="space-y-1">
+            <p className="text-xs font-medium uppercase tracking-wider" style={{ color: 'var(--accent)' }}>Location</p>
+            <p className="text-sm font-medium" style={{ color: 'var(--text)' }}>{CONTACT.location}</p>
           </div>
         </div>
-        <div className="border-t px-6 py-4 text-xs text-gray-500">Typically responds within 24–48 hours.</div>
       </div>
     </div>
   )

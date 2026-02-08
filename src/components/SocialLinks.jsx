@@ -12,7 +12,7 @@ const links = [
   },
   {
     name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/sriharsha-godavarthi',
+    href: 'https://www.linkedin.com/in/harsha-wmu/',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
         <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v15H0V8zm7.5 0h4.8v2.1h.07c.67-1.27 2.3-2.6 4.73-2.6 5.06 0 6 3.33 6 7.66V23H18v-6.67c0-1.59-.03-3.63-2.21-3.63-2.21 0-2.55 1.73-2.55 3.51V23H7.5V8z" />
@@ -32,20 +32,20 @@ const links = [
 
 export default function SocialLinks() {
   return (
-    <div className="space-y-6">
-      <h2 className="text-xl sm:text-2xl font-semibold">Social</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {links.map((l) => (
+    <div className="space-y-5">
+      <span className="sec-label">Social</span>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {links.map(l => (
           <a
             key={l.name}
             href={l.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-3 rounded-xl border bg-white p-4 shadow-sm hover:shadow-md hover:border-blue-300"
+            className="panel panel-lift group flex items-center gap-4 p-5"
             aria-label={l.name}
           >
-            <span className="text-blue-700 group-hover:text-blue-800">{l.icon}</span>
-            <span className="text-sm font-medium text-gray-800 group-hover:text-blue-800">{l.name}</span>
+            <span className="ibox" style={{ color: 'var(--accent)' }}>{l.icon}</span>
+            <p className="font-semibold text-sm" style={{ color: 'var(--text)' }}>{l.name}</p>
           </a>
         ))}
       </div>

@@ -1,11 +1,480 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* App-level defaults */
-:root { color-scheme: light; }
+/* ═══════════════════════════════════════
+   DESIGN TOKENS — Warm Indigo / Stone
+   ═══════════════════════════════════════ */
 
-html, body, #root { height: 100%; }
+:root[theme="light"] {
+  --bg:             #fafaf9;
+  --bg-alt:         #f5f5f4;
+  --surface:        #ffffff;
+  --surface-hover:  #fafaf9;
 
-/* Smooth anchor scrolling */
-html { scroll-behavior: smooth; }
+  --text:           #1c1917;
+  --text-2:         #57534e;
+  --text-3:         #a8a29e;
+
+  --border:         #e7e5e4;
+  --divider:        #f5f5f4;
+
+  --accent:         #4f46e5;
+  --accent-hover:   #4338ca;
+  --accent-soft:    #eef2ff;
+  --accent-t:       #3730a3;
+
+  --tag-bg:         #f5f5f4;
+  --tag-text:       #44403c;
+
+  --green-bg:       #ecfdf5;
+  --green-text:     #065f46;
+  --green-dot:      #10b981;
+
+  --shadow-xs:      0 1px 2px rgba(28,25,23,.04);
+  --shadow-sm:      0 1px 3px rgba(28,25,23,.06), 0 1px 2px rgba(28,25,23,.04);
+  --shadow-md:      0 4px 12px rgba(28,25,23,.08);
+  --shadow-lg:      0 12px 24px rgba(28,25,23,.1);
+
+  --header-bg:      rgba(250,250,249,.88);
+  --overlay:        rgba(28,25,23,.3);
+  --hero-from:      #eef2ff;
+  --hero-to:        #fafaf9;
+}
+
+:root[theme="dark"] {
+  --bg:             #050404;
+  --bg-alt:         #1c1917;
+  --surface:        #1c1917;
+  --surface-hover:  #292524;
+
+  --text:           #fafaf9;
+  --text-2:         #a8a29e;
+  --text-3:         #78716c;
+
+  --border:         #292524;
+  --divider:        #292524;
+
+  --accent:         #818cf8;
+  --accent-hover:   #a5b4fc;
+  --accent-soft:    rgba(129,140,248,.08);
+  --accent-t:       #a5b4fc;
+
+  --tag-bg:         #292524;
+  --tag-text:       #d6d3d1;
+
+  --green-bg:       rgba(16,185,129,.08);
+  --green-text:     #6ee7b7;
+  --green-dot:      #34d399;
+
+  --shadow-xs:      0 1px 2px rgba(0,0,0,.2);
+  --shadow-sm:      0 1px 3px rgba(0,0,0,.3), 0 1px 2px rgba(0,0,0,.2);
+  --shadow-md:      0 4px 12px rgba(0,0,0,.4);
+  --shadow-lg:      0 12px 24px rgba(0,0,0,.5);
+
+  --header-bg:      rgba(12,10,9,.9);
+  --overlay:        rgba(0,0,0,.5);
+  --hero-from:      rgba(129,140,248,.06);
+  --hero-to:        #0c0a09;
+}
+/* ═══ ROBOT PULLING RESUME ANIMATION ═══ */
+.robot-image {
+  height: 120px;
+  width: 120px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/4712/4712109.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  z-index: 100;
+  pointer-events: none;
+  top: -150px;
+  left: 80%;
+  filter: drop-shadow(0 6px 18px rgba(79, 70, 229, 0.35));
+  animation: robotPull 4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* ═══ TECH STACK FALLING BACKGROUND ═══ */
+.snowfall-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.tech-fall {
+  position: absolute;
+  top: -60px;
+  width: 44px;
+  height: 44px;
+  opacity: 0;
+  
+  animation: techfall linear 5s infinite;
+  filter: drop-shadow(0 2px 8px rgba(79, 70, 229, 0.3));
+}
+
+.tech-fall:nth-child(1)  { left:  3%; width: 40px; height: 40px; animation-duration: 10s;  animation-delay: 6s;   }
+.tech-fall:nth-child(2)  { left: 13%; width: 36px; height: 36px; animation-duration: 12s;  animation-delay: 7.5s; }
+.tech-fall:nth-child(3)  { left: 22%; width: 42px; height: 42px; animation-duration: 9s;   animation-delay: 6.8s; }
+.tech-fall:nth-child(4)  { left: 33%; width: 38px; height: 38px; animation-duration: 13s;  animation-delay: 9s;   }
+.tech-fall:nth-child(5)  { left: 42%; width: 34px; height: 34px; animation-duration: 11s;  animation-delay: 8s;   }
+.tech-fall:nth-child(6)  { left: 53%; width: 40px; height: 40px; animation-duration: 10.5s; animation-delay: 6.5s; }
+.tech-fall:nth-child(7)  { left: 63%; width: 36px; height: 36px; animation-duration: 14s;  animation-delay: 10s;  }
+.tech-fall:nth-child(8)  { left: 73%; width: 44px; height: 44px; animation-duration: 11.5s; animation-delay: 7s;   }
+.tech-fall:nth-child(9)  { left: 82%; width: 38px; height: 38px; animation-duration: 9.5s; animation-delay: 8.5s; }
+.tech-fall:nth-child(10) { left: 90%; width: 34px; height: 34px; animation-duration: 12.5s; animation-delay: 9.5s; }
+.tech-fall:nth-child(11) { left: 48%; width: 42px; height: 42px; animation-duration: 13.5s; animation-delay: 11s;  }
+.tech-fall:nth-child(12) { left: 96%; width: 36px; height: 36px; animation-duration: 10s;  animation-delay: 7.8s; }
+
+@keyframes techfall {
+  0% {
+    top: -60px;
+    opacity: 0;
+    transform: translateX(0) rotate(0deg);
+  }
+  8% {
+    opacity: 0.8;
+  }
+  25% {
+    transform: translateX(25px) rotate(45deg);
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateX(-20px) rotate(120deg);
+  }
+  75% {
+    transform: translateX(15px) rotate(240deg);
+    opacity: 0.45;
+  }
+  100% {
+    top: 105vh;
+    opacity: 0;
+    transform: translateX(-10px) rotate(360deg);
+  }
+}
+
+/* Portfolio content pulled in by the robot */
+.portfolio-content {
+  position: relative;
+  /* z-index: 51; */
+  animation: pullPortfolio 4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Robot: descend → hook → pull left → fly away */
+@keyframes robotPull {
+  /* Enter from above, right side */
+  0% {
+    top: -150px;
+    left: 85%;
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  /* Descend to visible area */
+  12% {
+    top: 35vh;
+    left: 82%;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  /* Pause & "hook" — wobble and flip to face left */
+  18% {
+    top: 35vh;
+    left: 82%;
+    transform: rotate(12deg);
+    opacity: 1;
+  }
+  22% {
+    top: 36vh;
+    left: 82%;
+    transform: scaleX(-1) rotate(-8deg);
+    opacity: 1;
+  }
+  /* Start pulling left — straining lean */
+  40% {
+    top: 28vh;
+    left: 55%;
+    transform: scaleX(-1) rotate(-14deg);
+    opacity: 1;
+  }
+  /* Mid-pull — bobbing effort */
+  50% {
+    top: 32vh;
+    left: 40%;
+    transform: scaleX(-1) rotate(-6deg);
+    opacity: 1;
+  }
+  /* Almost there — big strain */
+  62% {
+    top: 25vh;
+    left: 18%;
+    transform: scaleX(-1) rotate(-16deg);
+    opacity: 1;
+  }
+  /* Resume in place — robot releases */
+  72% {
+    top: 22vh;
+    left: 5%;
+    transform: scaleX(-1) rotate(0deg);
+    opacity: 1;
+  }
+  /* Flip back and bounce up */
+  80% {
+    top: 15vh;
+    left: 8%;
+    transform: scaleX(1) rotate(15deg);
+    opacity: 1;
+  }
+  /* Fly upward */
+  92% {
+    top: -80px;
+    left: 10%;
+    transform: scaleX(1) rotate(5deg);
+    opacity: 0.6;
+  }
+  100% {
+    top: -200px;
+    left: 12%;
+    transform: scaleX(1) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+/* Resume slides in from the right, synced with the robot pull */
+@keyframes pullPortfolio {
+  0%, 18% {
+    transform: translateX(110vw);
+    opacity: 0;
+  }
+  22% {
+    transform: translateX(95vw);
+    opacity: 0.1;
+  }
+  40% {
+    transform: translateX(55vw);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(35vw);
+    opacity: 0.7;
+  }
+  62% {
+    transform: translateX(10vw);
+    opacity: 0.9;
+  }
+  72% {
+    transform: translateX(-2vw);
+    opacity: 1;
+  }
+  /* Subtle bounce-back settle */
+  82% {
+    transform: translateX(1vw);
+    opacity: 1;
+  }
+  90% {
+    transform: translateX(-0.5vw);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* ═══ RESETS ═══ */
+html, body, #root { height: 100%; margin: 0; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+html, body { color: var(--text); background: var(--bg); }
+*, *::before, *::after { border-color: var(--border); }
+html[theme="light"] { color-scheme: light; }
+html[theme="dark"]  { color-scheme: dark; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ═══ LAYOUT UTILITIES ═══ */
+.v-header {
+  background: var(--header-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.v-nav {
+  color: var(--text-3);
+  font-size: .8125rem;
+  font-weight: 500;
+  padding: .35rem .75rem;
+  border-radius: 9999px;
+  transition: all .2s;
+}
+.v-nav:hover {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+.v-mob {
+  display: block;
+  padding: .75rem 1rem;
+  font-size: .9375rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: background .15s;
+}
+.v-mob:hover { background: var(--surface-hover); }
+
+/* ═══ SECTION LABEL ═══ */
+.sec-label {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--accent);
+}
+
+/* ═══ PANEL ═══ */
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-xs);
+}
+.panel-lift {
+  transition: transform .2s, box-shadow .2s;
+}
+.panel-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ═══ CHIP ═══ */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: .3rem .75rem;
+  border-radius: 9999px;
+  font-size: .75rem;
+  font-weight: 500;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+}
+
+/* ═══ BUTTON ═══ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .625rem 1.5rem;
+  border-radius: 9999px;
+  font-size: .875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s;
+}
+.btn-fill {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+.btn-fill:hover {
+  background: var(--accent-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+.btn-ring {
+  border: 1.5px solid var(--border);
+  color: var(--text);
+  background: transparent;
+}
+.btn-ring:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* ═══ BADGE ═══ */
+.badge-green {
+  display: inline-flex;
+  align-items: center;
+  gap: .375rem;
+  padding: .3rem .75rem;
+  border-radius: 9999px;
+  font-size: .75rem;
+  font-weight: 600;
+  background: var(--green-bg);
+  color: var(--green-text);
+}
+.badge-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--green-dot);
+  animation: blink 2s ease-in-out infinite;
+}
+@keyframes blink {
+  0%,100% { opacity: 1; }
+  50%     { opacity: .3; }
+}
+
+/* ═══ ICON BOX ═══ */
+.ibox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem; height: 2.5rem;
+  border-radius: .75rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ═══ TABS ═══ */
+.tab-bar {
+  display: flex;
+  gap: .25rem;
+  padding: .25rem;
+  border-radius: 9999px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+}
+.tab-btn {
+  flex: 1;
+  padding: .5rem .75rem;
+  border-radius: 9999px;
+  font-size: .8125rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-3);
+  cursor: pointer;
+  transition: all .2s;
+  border: none;
+  background: transparent;
+}
+.tab-btn:hover { color: var(--text-2); }
+.tab-active {
+  background: var(--surface);
+  color: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ═══ STAT ═══ */
+.stat-num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+}
+.stat-lbl {
+  font-size: .75rem;
+  color: var(--text-3);
+  margin-top: .25rem;
+}
+
+/* ═══ FOOTER ═══ */
+.v-footer {
+  color: var(--text-3);
+  font-size: .75rem;
+  text-align: center;
+  padding: 2.5rem 0 2rem;
+}
