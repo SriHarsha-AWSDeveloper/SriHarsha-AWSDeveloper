@@ -79,10 +79,7 @@
 .robot-image {
   height: 120px;
   width: 120px;
-  background-image: url('https://cdn-icons-png.flaticon.com/512/4712/4712109.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  object-fit: contain;
   position: fixed;
   z-index: 100;
   pointer-events: none;

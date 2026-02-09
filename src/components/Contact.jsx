@@ -3,7 +3,7 @@
 export default function Contact() {
   const CONTACT = {
     email: 'sriharsha.godavarthideveloper@gmail.com',
-    phone: '+1-945-342-3862',
+    phone: '+1-945-371-4867',
     location: 'United States',
   }
 

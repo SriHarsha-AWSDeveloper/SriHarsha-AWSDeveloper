@@ -10,7 +10,7 @@ export default function About() {
         </span>
         <div className="space-y-3" style={{ color: 'var(--text-2)' }}>
           <p className="leading-relaxed">
-            Eight years of full-stack Java experience across healthcare, e-commerce, and finance. Currently building scalable, highly available, fault-tolerant applications in the healthcare sector.
+            Sr. Full Stack Developer experience across healthcare, e-commerce, and finance. Currently building scalable, highly available, fault-tolerant applications in the healthcare sector.
           </p>
           <p className="leading-relaxed">
             I design responsive frontends and microservice backends with Java and Spring Boot, building REST and GraphQL APIs with clean, layered architecture and strong testing practices.

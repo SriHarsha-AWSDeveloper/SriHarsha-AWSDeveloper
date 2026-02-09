@@ -28,20 +28,20 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* HEADER */}
-      <div className="robot-image"></div>
+      <img className="robot-image" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f916.svg" alt="Robot" loading="lazy" decoding="async" width="120" height="120" />
       <div className='snowfall-container'>
-        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" />
-        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
-        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
-        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
-        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring" />
-        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
-        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform" />
-        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" />
-        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" />
-        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" />
-        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" />
-        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" />
+        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" loading="lazy" decoding="async" width="40" height="40" />
+        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" loading="lazy" decoding="async" width="40" height="40" />
+        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" loading="lazy" decoding="async" width="40" height="40" />
+        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" loading="lazy" decoding="async" width="40" height="40" />
+        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring" loading="lazy" decoding="async" width="40" height="40" />
+        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy" decoding="async" width="40" height="40" />
+        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform" loading="lazy" decoding="async" width="40" height="40" />
+        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" loading="lazy" decoding="async" width="40" height="40" />
+        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" loading="lazy" decoding="async" width="40" height="40" />
+        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" loading="lazy" decoding="async" width="40" height="40" />
+        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" loading="lazy" decoding="async" width="40" height="40" />
+        <img className="tech-fall" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" loading="lazy" decoding="async" width="40" height="40" />
       </div>
       <div className='portfolio-content'>
         <header className="v-header sticky top-0 z-50">
