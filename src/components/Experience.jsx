@@ -2,9 +2,9 @@ import React from 'react'
 
 const roles = [
   { company: 'The Cigna Group', title: 'Senior Software Developer', period: 'Mar 2024 - Present', location: 'Irving, TX' },
-  { company: 'Volkswagen', title: 'Sr Software Developer', period: 'Nov 2021 - Feb 2024', location: 'Rochester, MI' },
+  { company: 'Volkswagen', title: 'Senior Software Developer', period: 'Nov 2021 - Feb 2024', location: 'Rochester, MI' },
   { company: 'First Horizon Bank', title: 'Software Developer', period: 'Jan 2020 - Oct 2021', location: 'Memphis, TN' },
-  { company: 'HashTag Technologies', title: 'Junior Software Developer', period: 'Jul 2018 - Dec 2019', location: 'Coimbatore, IN' },
+  { company: 'HashTag Technologies', title: 'Software Developer', period: 'Jul 2018 - Dec 2019', location: 'Coimbatore, IN' },
 ]
 
 export default function Experience() {
