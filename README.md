@@ -3,7 +3,7 @@
 [![Website](https://img.shields.io/badge/portfolio-sriharsha.tech-blue)](https://sriharsha.tech)
 [![Email](https://img.shields.io/badge/email-sriharsha.tech.us%40gmail.com-green)](mailto:sriharsha.tech.us@gmail.com)
 [![Phone](https://img.shields.io/badge/phone-%2B1%20945--371--4867-lightgrey)](tel:+19453714867)
-[![LinkedIn](https://img.shields.io/badge/linkedin-Connect-blue)](https://www.linkedin.com/in/your-profile)
+[![LinkedIn](https://img.shields.io/badge/linkedin-Connect-blue)](https://www.linkedin.com/in/sri-harsha-wmu/)
 [![GitHub](https://img.shields.io/badge/github-SriHarsha--AWSDeveloper-black)](https://github.com/SriHarsha-AWSDeveloper)
 
 [![SriHarsha's GitHub stats](https://github-readme-stats.vercel.app/api?username=SriHarsha-AWSDeveloper&show_icons=true&theme=default)](https://github.com/SriHarsha-AWSDeveloper)
@@ -11,13 +11,13 @@
 
 ---
 
-## Senior Full-Stack & Cloud Engineer — Java · React · AWS
+## Senior Software Developer
 
-Full-Stack Developer with 8+ years delivering scalable, secure enterprise systems across healthcare, banking, automotive, and e‑commerce. Proven in building production-grade microservices, cloud-native architectures, and developer-friendly CI/CD pipelines. I design and deliver observability-first, automated systems that reduce risk and accelerate releases.
+I am a Senior Software Engineer with around 8 years of experience working across Healthcare, E-commerce, and Banking domains. Currently, I am working in the Healthcare sector, building scalable and secure applications. On the frontend, I have strong experience with React, Angular, and TypeScript to develop Single Page Applications. On the backend, I have worked with Java, Spring Boot, Hibernate, and Node.js to build REST and GraphQL APIs. I have implemented authentication and authorization using OAuth2 and JWT, and set up CI/CD pipelines using Jenkins and GitHub Actions. I also have working knowledge of cloud platforms like AWS, Azure, and GCP, and I follow test-driven practices using JUnit and Mockito. I have hands-on experience with both SQL and NoSQL databases such as MySQL, PostgreSQL, MongoDB, and DynamoDB.
 
 ---
 
-## Core Skills (visual)
+## Skills
 
 <!-- Languages & Platforms -->
 <p>
@@ -60,27 +60,9 @@ Full-Stack Developer with 8+ years delivering scalable, secure enterprise system
 
 ---
 
-## Education
-- M.S. in Computer Science — Western Michigan University, Kalamazoo, MI  
-- B.S. in Computer Science — Sathyabama University, Chennai, India
-
----
-
-## Open to
-- Senior/Lead Full-Stack or Cloud Engineer roles  
-- Contract & consulting opportunities (cloud-native architecture, migration, platform engineering)
-
----
-
 ## Contact
 - Email: sriharsha.tech.us@gmail.com  
 - Phone: +1 (945) 371-4867  
-- LinkedIn: https://www.linkedin.com/in/your-profile  
+- LinkedIn: https://www.linkedin.com/in/sri-harsha-wmu/  
 - GitHub: https://github.com/SriHarsha-AWSDeveloper  
 - Portfolio: https://sriharsha.tech
-
----
-
-Notes for recruiters
-- Available for full‑time and contract roles; experienced with enterprise delivery cycles and cross-functional collaboration.  
-- Hands-on with architecture, implementations, and team mentoring; can rapidly onboard and contribute to production systems.
