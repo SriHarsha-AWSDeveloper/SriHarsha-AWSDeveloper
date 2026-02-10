@@ -1,6 +1,6 @@
 # Sri Harsha Godavarthi 👋
 
-[![Website](https://img.shields.io/badge/portfolio-sriharsha.tech-blue)](https://sriharsha.tech)
+[![Website](https://img.shields.io/badge/portfolio-sriharsha.tech-blue)](https://sri-harsha-aws-developer.vercel.app/)
 [![Email](https://img.shields.io/badge/email-sriharsha.tech.us%40gmail.com-green)](mailto:sriharsha.tech.us@gmail.com)
 [![Phone](https://img.shields.io/badge/phone-%2B1%20945--371--4867-lightgrey)](tel:+19453714867)
 [![LinkedIn](https://img.shields.io/badge/linkedin-Connect-blue)](https://www.linkedin.com/in/sri-harsha-wmu/)
@@ -65,4 +65,4 @@ I am a Senior Software Engineer with around 8 years of experience working across
 - Phone: +1 (945) 371-4867  
 - LinkedIn: https://www.linkedin.com/in/sri-harsha-wmu/  
 - GitHub: https://github.com/SriHarsha-AWSDeveloper  
-- Portfolio: https://sriharsha.tech
+- Portfolio: https://sri-harsha-aws-developer.vercel.app/
