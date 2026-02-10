@@ -4,10 +4,10 @@
 [![Email](https://img.shields.io/badge/email-sriharsha.tech.us%40gmail.com-green)](mailto:sriharsha.tech.us@gmail.com)
 [![Phone](https://img.shields.io/badge/phone-%2B1%20945--371--4867-lightgrey)](tel:+19453714867)
 [![LinkedIn](https://img.shields.io/badge/linkedin-Connect-blue)](https://www.linkedin.com/in/sri-harsha-wmu/)
-[![GitHub](https://img.shields.io/badge/github-SriHarsha--AWSDeveloper-black)](https://github.com/SriHarsha-AWSDeveloper)
+<!-- [![GitHub](https://img.shields.io/badge/github-SriHarsha--AWSDeveloper-black)](https://github.com/SriHarsha-AWSDeveloper)
 
 [![SriHarsha's GitHub stats](https://github-readme-stats.vercel.app/api?username=SriHarsha-AWSDeveloper&show_icons=true&theme=default)](https://github.com/SriHarsha-AWSDeveloper)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SriHarsha-AWSDeveloper&layout=compact&theme=default)](https://github.com/SriHarsha-AWSDeveloper)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SriHarsha-AWSDeveloper&layout=compact&theme=default)](https://github.com/SriHarsha-AWSDeveloper) -->
 
 ---
 
