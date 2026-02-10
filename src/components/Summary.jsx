@@ -19,12 +19,12 @@ export default function Summary() {
       <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight">
         Sri Harsha
         <span className="block text-lg sm:text-xl font-medium mt-1" style={{ color: 'var(--text-2)' }}>
-          Senior Software Engineer
+          Senior Software Developer
         </span>
       </h1>
 
       <p className="max-w-2xl leading-relaxed" style={{ color: 'var(--text-2)' }}>
-       Senior Software Engineer with experience in scalable, highly available applications across multiple domains. Actively uses AI in daily development workflows to accelerate delivery and problem-solving.
+       Senior Software Developer with experience in scalable, highly available applications across multiple domains. Actively uses AI in daily development workflows to accelerate delivery and problem-solving.
       </p>
 
       {/* <div className="flex flex-wrap gap-2">
